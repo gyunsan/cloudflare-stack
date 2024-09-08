@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "bunx @cloudflare/next-on-pages",
+    "pages:build": "next build",
+    "pages:deploy": "wrangler pages deploy .vercel/output/static",
     "preview": "bun pages:build && wrangler pages dev",
-    "deploy": "bun pages:build && wrangler pages deploy",
+    "deploy": "bun run pages:build && bun run pages:deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "setup": "bun run scripts/setup.ts"
   },
@@ -35,7 +36,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1",
+    "@cloudflare/next-on-pages": "^1.13.2",
     "@cloudflare/workers-types": "^4.20240903.0",
     "@types/node": "^20",
     "@types/react": "^18",
