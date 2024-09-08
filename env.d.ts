@@ -3,4 +3,5 @@
 
 interface CloudflareEnv {
 	DATABASE: D1Database;
+	MY_SECRET: string;
 }

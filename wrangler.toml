@@ -12,3 +12,5 @@ binding = "DATABASE"
 database_name = "towns"
 database_id = "ce736757-4c3b-4a7c-8fc8-46e7203d3a82"
 
+[vars]
+MY_SECRET = 'this is a secret'
