@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "pages:build": "next build",
-    "pages:deploy": "wrangler pages deploy .vercel/output/static",
+    "pages:deploy": "wrangler pages deploy .next",
     "preview": "bun pages:build && wrangler pages dev",
     "deploy": "bun run pages:build && bun run pages:deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",

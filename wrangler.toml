@@ -1,9 +1,8 @@
 name = "cloudflare-saas-stack"
 compatibility_date = "2024-09-03"
 compatibility_flags = [ "nodejs_compat" ]
+pages_build_output_dir = ".next"
 
-# Remove this line as it's not needed for Cloudflare Pages
-# pages_build_output_dir = ".vercel/output/static"
 
 [placement]
 mode = "smart"
@@ -12,9 +11,3 @@ mode = "smart"
 binding = "DATABASE"
 database_name = "towns"
 database_id = "ce736757-4c3b-4a7c-8fc8-46e7203d3a82"
-
-# Add these lines for Cloudflare Pages configuration
-[build]
-command = "bun run pages:build"
-[build.upload]
-# format = "directory"
