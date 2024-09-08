@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeScript } from "@/lib/theme/theme-script";
+import { Providers } from "@/lib/theme/provider";
+import Nav from "@/components/NextUI/Navigarion/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className='dark'>
       <head>
-        <ThemeScript/>
+        <ThemeScript />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <Nav>
+            {children}
+          </Nav>
+        </Providers>
+      </body>
     </html>
   );
 }

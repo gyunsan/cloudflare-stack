@@ -10,7 +10,11 @@ if (process.env.NODE_ENV === 'development') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  compress: true
+  compress: true,
+  // add unsplash rule
+  images: {
+    domains: ['images.unsplash.com'],
+  },
 };
 
 export default nextConfig;
